@@ -38,12 +38,12 @@ body:after {
   /* content is required when using :after */
   content: "";
   /* The animation */
-  animation: grain 8s steps(10) infinite;
+  animation: grain 15s steps(10) infinite;
   /* The grainy image */
   background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/paper_1.png");
   /* Specify a height and width above and beyond the page header for movement */
-  height: 300%;
-  width: 300%;
+  height: 300vh;
+  width: 300vw;
   /* We're using opacity in place of a transparent image */
   top: -100%;
   left: -50%;
