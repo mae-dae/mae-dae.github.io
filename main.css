@@ -33,3 +33,7 @@ body {
   font: 400 16px/24px var(--body-font);
   letter-spacing: .1px;
 }
+
+h1 {
+font-weight: bold;
+}
