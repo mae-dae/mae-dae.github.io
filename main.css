@@ -4,6 +4,32 @@
   box-sizing: border-box;
 }
 
+:root {
+  --pinkd: 237 98 93;
+  --pinkd-hex: #ed625d;
+  --pinkl: 247 159 136;
+  --pinkl-hex: #f79f88;
+  --blued: 3 35 45;
+  --blued-hex: #03232d;
+  --bluem: 6 182 198;
+  --bluem-hex: #42b6c6;
+  --bluel: 178 223 230;
+  --bluel-hex: #b2dfe6;
+  --black: 18 18 18;
+  --black-hex: #121212;
+  --white: 255 255 255;
+  --white-hex: #ffffff;
+  
+  --body-font: 'Raleway';
+  --title-font: 'Vidaloka';
+}
+
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  color: var(--black-hex);
+  font: 400 16px/24px var(--body-font);
+  letter-spacing: .1px;
 }
