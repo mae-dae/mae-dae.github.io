@@ -41,7 +41,7 @@ body {
   /* content is required when using :after */
   content: "";
   /* The animation */
-  animation: grain 15s steps(10) infinite;
+  animation: grain 8s steps(10) infinite;
   /* The grainy image */
   background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/paper_1.png");
   /* Specify a height and width above and beyond the page header for movement */
