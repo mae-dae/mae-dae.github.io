@@ -38,20 +38,14 @@ body {
   background-image: radial-gradient(circle at 43.56% 1.07%, #fae79b, transparent 49%),radial-gradient(circle at 19.03% 31.2%, #d47fa9, transparent 37%),radial-gradient(circle at 19.91% 99.09%, #bbedfa, transparent 49%),radial-gradient(circle at 3.51% 57.08%, #9031c8, transparent 54%),radial-gradient(circle at 97.51% 91.17%, #c0f492, transparent 49%),radial-gradient(circle at 50% 50%, #960645, #960645 100%);
 }
 #header:before {
-  /* content is required when using :after */
   content: "";
-  /* The animation */
   animation: grain 8s steps(10) infinite;
-  /* The grainy image */
   background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/paper_1.png");
-  /* Specify a height and width above and beyond the page header for movement */
   height: 300%;
   width: 300%;
-  /* We're using opacity in place of a transparent image */
-  top: -100%;
+  top: -110%;
   left: -50%;
   opacity: 0.3;
-  /* We'll need this when the animation kicks in to hold the position of the texture */
   position: fixed;
 }
 @keyframes grain {
