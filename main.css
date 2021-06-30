@@ -101,10 +101,15 @@ body {
   background: rgba(var(--white) / 70%);
 }
 #socials a:link, #socials a:visited, #socials a:active {
-  color: blue;
+  color: #bf5475;
+  text-shadow: none;
+  margin-right: 5%;
+  transform: .8s ease-in-out;
 }
 #socials a:hover {
-   color: red;
+  color: #bf5475;
+  text-shadow: none;
+  transform: .8s ease-in-out;
 }
 
 #navigation {
