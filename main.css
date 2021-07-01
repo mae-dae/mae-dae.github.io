@@ -77,8 +77,8 @@ body {
   left: 0;
   z-index: 1;
   display: grid;
-  grid-template-columns: 2.5vw 35vw 62.5vw;
-  grid-template-rows: 2.5vw calc(100vh - 2.5vw);
+  grid-template-columns: 35px 35vw 62.5vw;
+  grid-template-rows: 35px calc(100vh - 35px);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
 }
