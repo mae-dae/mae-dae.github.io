@@ -122,14 +122,14 @@ body {
   padding: 0px 10px;
   background: rgba(var(--white) / 70%);
 }
-#navigation a {
-  color: var(--black-hex);
+#navigation a:link, #navigation a:visited, #navigation a:active, #navigation a:hover {
+  color: var(--lpink-hex);
   text-transform: uppercase;
   font-weight: 600;
   text-decoration: none;
 }
-#navigation a:link, #navigation a:visited, #navigation a:active, #navigation a:hover {
-  color: var(--lpink-hex);
+#navigation .no-link, #navigation .nolink:hover {
+  color: var(--black-hex);
   text-transform: uppercase;
   font-weight: 600;
   text-decoration: none;
