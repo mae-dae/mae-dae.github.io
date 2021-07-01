@@ -6,6 +6,8 @@
 }
 
 .player {
+  width: 360px;
+  height: 360px;
   border-radius: 77% 100% 74% 100% / 100% 100% 72% 66%;
 }
 #dae {}
