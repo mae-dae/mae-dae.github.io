@@ -121,7 +121,13 @@ body {
   padding: 0px 10px;
   background: rgba(var(--white) / 70%);
 }
-#navigation a, #navigation a:link, #navigation a:visited, #navigation a:active, #navigation a:hover {
+#navigation a {
+  color: var(--black-hex);
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+}
+#navigation a:link, #navigation a:visited, #navigation a:active, #navigation a:hover {
   color: #bf5475;
   text-transform: uppercase;
   font-weight: 600;
