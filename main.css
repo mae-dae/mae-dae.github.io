@@ -128,8 +128,8 @@ body {
   text-decoration: none;
 }
 #navigation span {position: relative; width: max-content; margin-right: 5%;}
-#navigation span:before {display: block; content: ''; position: absolute; bottom: 6px; left: 0; height: 1px; width: 0; background-color: #81d2f1; transition: .8s ease-in-out;}
-#navigation span:hover:before {
+#navigation span.lactive:before {display: block; content: ''; position: absolute; bottom: 6px; left: 0; height: 1px; width: 0; background-color: #81d2f1; transition: .8s ease-in-out;}
+#navigation span.lactive:hover:before {
   width: 100%;
   transition: .8s ease-in-out;
 }
