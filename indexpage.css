@@ -11,8 +11,9 @@
   border-radius: 77% 100% 74% 100% / 100% 100% 72% 66%;
   background-size: cover;
   background-position: center;
+  position: absolute;
 }
-#dae {background-image: url(https://img.nickpic.host/5fnlAz.png);}
-#mae {background-image: url(https://img.nickpic.host/5fn57c.jpg);}
-#sitename {}
-#tagline {}
+#dae {background-image: url(https://img.nickpic.host/5fnlAz.png); z-index: 1;}
+#mae {background-image: url(https://img.nickpic.host/5fn57c.jpg); z-index: 3;}
+#sitename {position: relative; z-index: 2;}
+#tagline {position: relative; z-index: 2;}
