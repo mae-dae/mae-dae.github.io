@@ -9,8 +9,10 @@
   width: 360px;
   height: 360px;
   border-radius: 77% 100% 74% 100% / 100% 100% 72% 66%;
+  background-size: cover;
+  background-position: center;
 }
-#dae {}
-#mae {}
+#dae {background-image: url(https://img.nickpic.host/5fnlAz.png);}
+#mae {background-image: url(https://img.nickpic.host/5fn57c.jpg);}
 #sitename {}
 #tagline {}
