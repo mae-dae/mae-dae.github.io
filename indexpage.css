@@ -62,7 +62,16 @@
   grid-column-gap: 0px;
   grid-row-gap: 0px;
 }
+#ms-mae-n, #ms-dae-n {}
+#ms-mae-i, #ms-dae-i {}
 #ms-mae-n { grid-area: 1 / 1 / 2 / 2; }
-#ms-mae-i { grid-area: 2 / 1 / 3 / 2; }
-#ms-dae-n { grid-area: 3 / 1 / 4 / 2; }
+#ms-mae-i {
+  grid-area: 2 / 1 / 3 / 2;
+  border-top: 1px solid var(--black-hex);
+  border-bottom: 1px solid var(--black-hex);
+}
+#ms-dae-n {
+  grid-area: 3 / 1 / 4 / 2;
+  border-bottom: 1px solid var(--black-hex);
+}
 #ms-dae-i { grid-area: 4 / 1 / 5 / 2; }
