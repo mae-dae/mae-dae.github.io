@@ -107,8 +107,8 @@ body {
   transform: .8s ease-in-out;
 }
 #socials a:hover {
-  color: #bf5475;
-  text-shadow: none;
+  color: #81d2f1;
+  text-shadow: 0px 0px 10px #ffffff;
   transform: .8s ease-in-out;
 }
 
