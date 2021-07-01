@@ -62,8 +62,21 @@
   grid-column-gap: 0px;
   grid-row-gap: 0px;
 }
-#ms-mae-n, #ms-dae-n {}
-#ms-mae-i, #ms-dae-i {}
+#ms-mae-n, #ms-dae-n {
+  font: 400 6vw var(--title-font);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white-hex);
+}
+#ms-mae-i, #ms-dae-i {
+  padding: 5%;
+  text-align: justify;
+  text-transform: uppercase;
+  font-size: 0.8125rem;
+  letter-spacing: 1px;
+}
 #ms-mae-n { grid-area: 1 / 1 / 2 / 2; }
 #ms-mae-i {
   grid-area: 2 / 1 / 3 / 2;
