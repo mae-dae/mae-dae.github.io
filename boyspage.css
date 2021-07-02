@@ -3,3 +3,7 @@
     padding: 0;
     height: 100%;
 }
+
+.main-slider div {
+height: 100%;
+}
