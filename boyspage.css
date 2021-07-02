@@ -126,5 +126,19 @@ width: 30vw;
     background-size: cover;
     background-position: center;
 }
+.boy-name {
+height: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    font: 600 12vw/90% var(--title-font);
+    position: relative;
+    z-index: 2;
+    color: var(--lpink-hex);
+    padding-right: 5%;
+    mix-blend-mode: exclusion;
+}
+.boy-name span {}
 
 #gabe-page .boy-main-image div {background-image: url(https://64.media.tumblr.com/4471f99939e06f6876f44b4cc0600708/b5b56003134ad65d-b0/s400x600/16a1cafe3fe37827096c6cd7493c21e14e627fed.gif);}
