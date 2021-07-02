@@ -4,6 +4,13 @@
     height: 100%;
 }
 
-.main-slider div {
+.main-slider div.boy-slide {
 height: 100%;
+}
+
+.boys-wrapper .bx-controls {
+    position: absolute;
+    left: -35vw;
+    background: white;
+    width: 34.9vw;
 }
