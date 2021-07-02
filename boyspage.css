@@ -1,10 +1,41 @@
-#page-title {}
-#page-words {}
-#button-contain {}
-#b-prev {}
-#b-next {}
-#prev-button {}
-#next-button {}
+#page-title {
+font: 400 6vw var(--title-font);
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white-hex);
+    border-bottom: 1px solid var(--black-hex);
+    padding: 3vh 0px;
+}
+#page-words {
+padding: 5%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.8125rem;
+    letter-spacing: 1px;
+    border-bottom: 1px solid var(--black-hex);
+}
+#button-contain {
+display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    border-bottom: 1px solid var(--black-hex);
+}
+#b-prev {grid-area: 1 / 1 / 2 / 2; border-right: 1px solid var(--black-hex);}
+#b-next {grid-area: 1 / 2 / 2 / 3;}
+#b-prev, #b-next {
+padding: 5%;
+    text-align: center;
+    font-size: 3vw;
+    background: rgba(var(--lpink) / 40%);
+}
+#prev-button a, #next-button a {
+text-decoration: none;
+    color: var(--white-hex);
+}
 
 #the-boys {}
 .boys-pager {}
