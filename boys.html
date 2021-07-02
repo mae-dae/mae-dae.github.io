@@ -21,6 +21,8 @@
         wrapperClass: 'boys-wrapper',
         pagerCustom: '#the-boys',
         nextSelector: '#next-button',
+        nextText: '→',
+        prevText: '←',
         prevSelector: '#prev-button'
       });
     });
@@ -45,10 +47,11 @@
   <div id="side"> </div>
   <div id="main-links">
     
-    tabbed content links
+    <div id="page-title">The Boys</div>
+    <div id="page-words">Find general information about the boys here!</div>
     <div id="button-contain">
-      <div id="prev-button"></div>
-      <div id="next-button"></div>
+      <div id="b-prev"><div id="prev-button"></div></div>
+      <div id="b-next"><div id="next-button"></div></div>
     </div>
     <div id="the-boys"><div class="boys-pager">
       <div class="boys-pager-item"><a data-slide-index="0" class="boys-pager-link active">Gabe</a></div>
@@ -63,12 +66,12 @@
   <div id="main-content">
     
     <div class="main-slider">
-    <div class="boy-slide">Gabe</div>
-    <div class="boy-slide">June</div>
-    <div class="boy-slide">Ori</div>
-    <div class="boy-slide">Pawn</div>
-    <div class="boy-slide">Roman</div>
-    <div class="boy-slide">Tai</div>
+    <div class="boy-slide" id="gabe-page">Gabe</div>
+    <div class="boy-slide" id="june-page">June</div>
+    <div class="boy-slide" id="ori-page">Ori</div>
+    <div class="boy-slide" id="pawn-page">Pawn</div>
+    <div class="boy-slide" id="roman-page">Roman</div>
+    <div class="boy-slide" id="tai-page">Tai</div>
   </div>
     
   </div>
