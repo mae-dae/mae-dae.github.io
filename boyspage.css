@@ -55,6 +55,14 @@ width: max-content;
 width: 10vw;
     height: 10vw;
     position: relative;
+    transform: scale(0.7);
+    filter: grayscale(1);
+    transition: .8s ease-in-out;
+}
+.boys-pager-link.active {
+transform: scale(1);
+    filter: grayscale(0);
+    transition: .8s ease-in-out;
 }
 .boy-blob {
     border-radius: 38% 62% 69% 31% / 35% 46% 54% 65%;
