@@ -35,6 +35,8 @@ padding: 5%;
 #prev-button a, #next-button a {
 text-decoration: none;
     color: var(--white-hex);
+    display: block;
+    width: 100%;
 }
 
 #the-boys {}
