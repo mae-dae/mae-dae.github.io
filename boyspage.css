@@ -1,3 +1,4 @@
+#main-links {overflow: hidden;}
 #page-title {
 font: 400 6vw var(--title-font);
     text-transform: uppercase;
@@ -40,16 +41,28 @@ text-decoration: none;
 }
 
 #the-boys {}
-.boys-pager {}
-.boys-pager-item {}
-.boys-pager-link {}
+.boys-pager {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+}
+.boys-pager-item {
+width: max-content;
+    margin: 10px;
+}
+.boys-pager-link {position: relative;}
+.boys-pager-link a {
+width: 10vw;
+    height: 10vw;
+    position: relative;
+}
 .boy-blob {
     border-radius: 38% 62% 69% 31% / 35% 46% 54% 65%;
     padding: 5px;
     position: relative;
     z-index: 1;
-    width: 3vw;
-    height: 3vw;
+    width: 10vw;
+    height: 10vw;
 }
 .boy-blob div {
     width: 100%;
@@ -57,8 +70,9 @@ text-decoration: none;
     border-radius: 38% 62% 69% 31% / 35% 46% 54% 65%;
 }
 .boys-pager-link span {
-position: relative;
+position: absolute;
     z-index: 2;
+    bottom: 0;
 }
 
 .boys-wrapper {
