@@ -82,6 +82,11 @@ width: 10vw;
 position: absolute;
     z-index: 2;
     bottom: 0;
+    right: 0;
+    font: 600 2vw var(--title-font);
+    text-transform: uppercase;
+    color: var(--white-hex);
+    text-shadow: 2px 1px 3px rgba(var(--black) / 40%);
 }
 
 .boys-wrapper {
