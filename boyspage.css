@@ -11,6 +11,7 @@ height: 100%;
 .boys-wrapper .bx-controls {
     position: absolute;
     left: -35vw;
+    top: 0;
     background: white;
     width: 34.9vw;
 }
