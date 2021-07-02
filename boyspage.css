@@ -1,11 +1,24 @@
+#page-title {}
+#page-words {}
+#button-contain {}
+#b-prev {}
+#b-next {}
+#prev-button {}
+#next-button {}
+
+#the-boys {}
+.boys-pager {}
+.boys-pager-item {}
+.boys-pager-link {}
+
 .boys-wrapper {
     position: relative;
     padding: 0;
     height: 100%;
 }
-
 .main-slider div.boy-slide {
-height: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
 
