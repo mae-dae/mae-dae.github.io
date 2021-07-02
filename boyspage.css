@@ -52,6 +52,7 @@ width: max-content;
 }
 .boys-pager-link {position: relative;}
 .boys-pager-link a {
+    display: block;
 width: 10vw;
     height: 10vw;
     position: relative;
