@@ -1,6 +1,3 @@
-// when the DOM is ready...
-$(document).ready(function () {
-
 var flky = new Flickity( '.gallery', {
   // options, defaults listed
 
@@ -83,7 +80,5 @@ var flky = new Flickity( '.gallery', {
 
   wrapAround: true
   // at end of cells, wraps-around to first for infinite scrolling
-
-});
 
 });
