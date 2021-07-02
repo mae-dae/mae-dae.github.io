@@ -104,7 +104,7 @@ position: absolute;
 }
 .main-slider div.boy-slide {
     height: 100%;
-    overflow: hidden;
+    overflow: auto;
     background: rgba(var(--lpurple) / 20%);
     position: relative;
 }
