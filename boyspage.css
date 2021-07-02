@@ -137,7 +137,6 @@ height: 30vw;
     z-index: 2;
     color: var(--lpink-hex);
     padding-right: 5%;
-    padding-left: 25vw;
     mix-blend-mode: exclusion;
     text-align: right;
 }
