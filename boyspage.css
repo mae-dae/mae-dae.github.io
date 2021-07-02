@@ -139,6 +139,7 @@ height: 30vw;
     padding-right: 5%;
     mix-blend-mode: exclusion;
 }
-.boy-name span {}
+.boy-name span.name-first {color: var(--white-hex);}
+.boy-name span.name-last {opacity: 0.5;}
 
 #gabe-page .boy-main-image div {background-image: url(https://64.media.tumblr.com/4471f99939e06f6876f44b4cc0600708/b5b56003134ad65d-b0/s400x600/16a1cafe3fe37827096c6cd7493c21e14e627fed.gif);}
