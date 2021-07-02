@@ -73,12 +73,12 @@ width: 10vw;
     background-position: center;
     background-size: cover;
 }
-.boy-g {background-image: url(https://64.media.tumblr.com/4471f99939e06f6876f44b4cc0600708/b5b56003134ad65d-b0/s400x600/16a1cafe3fe37827096c6cd7493c21e14e627fed.gif);}
-.boy-j {background-image: url();}
-.boy-o {background-image: url();}
-.boy-p {background-image: url();}
-.boy-r {background-image: url();}
-.boy-t {background-image: url();}
+.boy-g div {background-image: url(https://64.media.tumblr.com/4471f99939e06f6876f44b4cc0600708/b5b56003134ad65d-b0/s400x600/16a1cafe3fe37827096c6cd7493c21e14e627fed.gif);}
+.boy-j div {background-image: url();}
+.boy-o div {background-image: url();}
+.boy-p div {background-image: url();}
+.boy-r div {background-image: url();}
+.boy-t div {background-image: url();}
 .boys-pager-link span {
 position: absolute;
     z-index: 2;
