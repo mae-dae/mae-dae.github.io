@@ -15,7 +15,11 @@
 
   <script>
     $(document).ready(function(){
-      $('.slider').bxSlider();
+      $('.slider').bxSlider({
+    mode: 'vertical',
+    hideControlOnEnd: true,
+        wrapperClass: 'bx-wrapper'
+  });
     });
   </script>
 </head>
