@@ -1,5 +1,5 @@
 ::-webkit-scrollbar {background: var(--lpink-hex); width: 3px;}
-::-webkit-scrollbar-thumb {border: 1px solid var(--lpink-hex); background: var(--black-hex);}
+::-webkit-scrollbar-thumb {border: 1px solid var(--lpink-hex); border-top: none; border-bottom: none; background: var(--black-hex);}
 #main-links {overflow: hidden;}
 #page-title {
 font: 400 6vw var(--title-font);
