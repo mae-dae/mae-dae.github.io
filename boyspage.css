@@ -244,7 +244,14 @@ text-transform: uppercase;
 .div12 { grid-area: 10 / 3 / 11 / 4; }
 .div13 { grid-area: 11 / 3 / 12 / 4; border-bottom: 1px solid rgba(var(--black) / 20%); }
 
+@font-face {
+    font-family: 'astrodotbasic';
+    src: url('AstroDotBasic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 .planet {text-transform: uppercase; border-right: 1px solid rgba(var(--black) / 20%); border-left: 1px solid rgba(var(--black) / 20%);}
+.planet i {font-family: astrodotbasic; font-style: none;}
 .house {
 display: flex;
     align-items: flex-end;
