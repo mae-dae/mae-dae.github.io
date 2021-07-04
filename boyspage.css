@@ -190,10 +190,29 @@ display: block;
     border-bottom: 1px solid var(--lpink-hex);
 }
 
-.boy-family {}
-.boy-family h1 {}
-.boy-family .word-block {}
-.boy-family .word-block h3 {}
+.boy-block {padding: 2vw;}
+.boy-block.boy-div {border-bottom: 1px solid var(--black-hex);}
+.boy-block h1 {
+    font: 400 5vw var(--title-font);
+    text-transform: uppercase;
+    color: var(--lpink-hex);
+}
+.boy-block .word-block {
+font-size: 0.8125rem;
+    letter-spacing: 1px;
+    color: var(--white-hex);
+    margin: 0 2vw;
+    border-left: 2px solid rgba(var(--lpink) / 20%);
+    padding: 2vw;
+    white-space: pre-line;
+}
+.boy-block .word-block h3 {
+font: 400 2vw var(--title-font);
+    text-transform: uppercase;
+    color: var(--white-hex);
+    width: max-content;
+    border-bottom: 1px solid var(--lpink-hex);
+}
 
 #gabe-page .boy-main-image div {background-image: url(https://64.media.tumblr.com/4471f99939e06f6876f44b4cc0600708/b5b56003134ad65d-b0/s400x600/16a1cafe3fe37827096c6cd7493c21e14e627fed.gif);}
 #june-page .boy-main-image div {background-image: url(https://i.pinimg.com/originals/b0/e9/81/b0e9810d6b862290108aa79e0e7b4637.jpg);}
