@@ -216,7 +216,7 @@ font: 400 2vw var(--title-font);
 
 .chart {
 display: grid;
-grid-template-columns: repeat(5, 1fr);
+grid-template-columns: 2vw repeat(3, 1fr) 2vw;
 grid-template-rows: repeat(11, 1fr);
 grid-column-gap: 0px;
 grid-row-gap: 0px;
@@ -225,7 +225,11 @@ grid-row-gap: 0px;
     font-size: 0.8125rem;
     letter-spacing: 1px;
 }
-.chart span {}
+.chart span {
+text-transform: uppercase;
+    font-size: 0.8125rem;
+    letter-spacing: 1px;
+}
 .chart div {}
 
 .div1 { grid-area: 1 / 1 / 12 / 2; }
