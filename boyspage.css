@@ -200,7 +200,6 @@ display: block;
 .boy-block .word-block {
 font-size: 0.8125rem;
     letter-spacing: 1px;
-    color: var(--white-hex);
     margin: 0 2vw;
     border-left: 2px solid rgba(var(--lpink) / 20%);
     padding: 2vw;
