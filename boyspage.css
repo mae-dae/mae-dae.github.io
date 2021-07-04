@@ -251,7 +251,7 @@ text-transform: uppercase;
     font-style: normal;
 }
 .planet {text-transform: uppercase; border-right: 1px solid rgba(var(--black) / 20%); border-left: 1px solid rgba(var(--black) / 20%);}
-.planet i {font-family: astrodotbasic; font-style: normal; font-size: 1.2rem;}
+.planet i {font-family: astrodotbasic; font-style: normal; font-size: 1.2rem; padding-right: 1vw;}
 .house {
 display: flex;
     align-items: flex-end;
