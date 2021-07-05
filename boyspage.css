@@ -288,9 +288,9 @@ display: flex;
 #ori-page .div14 { grid-area: 1 / 4 / 2 / 5; border-top: 1px solid rgba(var(--black) / 20%); }
 #ori-page .div15 { grid-area: 2 / 4 / 4 / 5; border-top: 1px solid rgba(var(--black) / 20%); }
 #ori-page .div16 { grid-area: 4 / 4 / 9 / 5; border-top: 1px solid rgba(var(--black) / 20%); }
-#ori-page .div17 { grid-area: 9 / 4 / 11 / 5; border-top: 1px solid rgba(var(--black) / 20%); }
-#ori-page .div18 { grid-area: 11 / 4 / 12 / 5; border-top: 1px solid rgba(var(--black) / 20%); border-bottom: 1px solid rgba(var(--black) / 20%); }
-#ori-page .div19 { grid-area: 1 / 2 / 2 / 3; border-bottom: 1px solid rgba(var(--black) / 20%); }
+#ori-page .div17 { grid-area: 9 / 4 / 11 / 5; border-top: 1px solid rgba(var(--black) / 20%); border-bottom: 1px solid rgba(var(--black) / 20%); }
+#ori-page .div18 { grid-area: 11 / 4 / 12 / 5; border-bottom: 1px solid rgba(var(--black) / 20%); }
+#ori-page .div19 { grid-area: 1 / 2 / 2 / 3; border-top: 1px solid rgba(var(--black) / 20%); }
 #ori-page .div20 { grid-area: 2 / 2 / 4 / 3; border-top: 1px solid rgba(var(--black) / 20%); }
 #ori-page .div21 { grid-area: 4 / 2 / 8 / 3; border-top: 1px solid rgba(var(--black) / 20%); }
 #ori-page .div22 { grid-area: 8 / 2 / 11 / 3; border-top: 1px solid rgba(var(--black) / 20%); border-bottom: 1px solid rgba(var(--black) / 20%); }
