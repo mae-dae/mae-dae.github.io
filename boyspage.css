@@ -213,6 +213,8 @@ font: 400 2vw var(--title-font);
     border-bottom: 1px solid var(--lpink-hex);
 }
 
+.astro-big3 {}
+.astro-big3 i {font-family: astrodotbasic; font-style: normal; font-size: 1.2rem; padding-right: .5vw;}
 .chart {
 display: grid;
 grid-template-columns: 2vw repeat(2, 1fr) 5vw 2vw;
