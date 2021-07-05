@@ -388,6 +388,8 @@ position: fixed;
     background-color: #f7f7f7;
     margin: -40vh 0 0 -40vw;
     z-index: 3;
+	overflow: auto;
+    border: 5vw solid #f7f7f7;
 }
 .analysis-container {
 display: flex;
