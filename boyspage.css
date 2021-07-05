@@ -269,21 +269,21 @@ display: flex;
 #gabe-page .div20 { grid-area: 8 / 2 / 9 / 3; border-top: 1px solid rgba(var(--black) / 20%); border-bottom: 1px solid rgba(var(--black) / 20%); }
 #gabe-page .div21 { grid-area: 9 / 2 / 12 / 3; border-bottom: 1px solid rgba(var(--black) / 20%); }
 
-#june-page .div14 { grid-area: 1 / 4 / 2 / 5; }
-#june-page .div15 { grid-area: 2 / 4 / 3 / 5; }
-#june-page .div16 { grid-area: 3 / 4 / 5 / 5; }
-#june-page .div17 { grid-area: 5 / 4 / 8 / 5; }
-#june-page .div18 { grid-area: 8 / 4 / 9 / 5; }
-#june-page .div19 { grid-area: 9 / 4 / 11 / 5; }
-#june-page .div20 { grid-area: 11 / 4 / 12 / 5; }
-#june-page .div21 { grid-area: 1 / 2 / 2 / 3; }
-#june-page .div22 { grid-area: 2 / 2 / 3 / 3; }
-#june-page .div23 { grid-area: 3 / 2 / 5 / 3; }
-#june-page .div24 { grid-area: 5 / 2 / 7 / 3; }
-#june-page .div25 { grid-area: 7 / 2 / 8 / 3; }
-#june-page .div26 { grid-area: 8 / 2 / 9 / 3; }
-#june-page .div27 { grid-area: 9 / 2 / 11 / 3; }
-#june-page .div28 { grid-area: 11 / 2 / 12 / 3; }
+#june-page .div14 { grid-area: 1 / 4 / 2 / 5; border-top: 1px solid rgba(var(--black) / 20%); }
+#june-page .div15 { grid-area: 2 / 4 / 3 / 5; border-top: 1px solid rgba(var(--black) / 20%); }
+#june-page .div16 { grid-area: 3 / 4 / 5 / 5; border-top: 1px solid rgba(var(--black) / 20%); }
+#june-page .div17 { grid-area: 5 / 4 / 8 / 5; border-top: 1px solid rgba(var(--black) / 20%); }
+#june-page .div18 { grid-area: 8 / 4 / 9 / 5; border-top: 1px solid rgba(var(--black) / 20%); }
+#june-page .div19 { grid-area: 9 / 4 / 11 / 5; border-top: 1px solid rgba(var(--black) / 20%); border-bottom: 1px solid rgba(var(--black) / 20%); }
+#june-page .div20 { grid-area: 11 / 4 / 12 / 5; border-bottom: 1px solid rgba(var(--black) / 20%); }
+#june-page .div21 { grid-area: 1 / 2 / 2 / 3; border-top: 1px solid rgba(var(--black) / 20%); }
+#june-page .div22 { grid-area: 2 / 2 / 3 / 3; border-top: 1px solid rgba(var(--black) / 20%); }
+#june-page .div23 { grid-area: 3 / 2 / 5 / 3; border-top: 1px solid rgba(var(--black) / 20%); }
+#june-page .div24 { grid-area: 5 / 2 / 7 / 3; border-top: 1px solid rgba(var(--black) / 20%); }
+#june-page .div25 { grid-area: 7 / 2 / 8 / 3; border-top: 1px solid rgba(var(--black) / 20%); }
+#june-page .div26 { grid-area: 8 / 2 / 9 / 3; border-top: 1px solid rgba(var(--black) / 20%); }
+#june-page .div27 { grid-area: 9 / 2 / 11 / 3; border-top: 1px solid rgba(var(--black) / 20%); border-bottom: 1px solid rgba(var(--black) / 20%); }
+#june-page .div28 { grid-area: 11 / 2 / 12 / 3; border-bottom: 1px solid rgba(var(--black) / 20%); }
 
 #gabe-page .boy-main-image div {background-image: url(https://64.media.tumblr.com/4471f99939e06f6876f44b4cc0600708/b5b56003134ad65d-b0/s400x600/16a1cafe3fe37827096c6cd7493c21e14e627fed.gif);}
 #june-page .boy-main-image div {background-image: url(https://i.pinimg.com/originals/b0/e9/81/b0e9810d6b862290108aa79e0e7b4637.jpg);}
