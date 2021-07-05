@@ -30,9 +30,9 @@
   </script>
   <script>
     $(document).ready(function(){
-      $( ".planet:contains('ascendant')" ).css( "font-weight", "bold" );
-      $( ".planet:contains('sun')" ).css( "font-weight", "bold" );
-      $( ".planet:contains('moon')" ).css( "font-weight", "bold" );
+      $( ".planet:contains('ascendant')" ).css( "font-weight", "bold" ).prop( "title", "rising meaning" );
+      $( ".planet:contains('sun')" ).css( "font-weight", "bold" ).prop( "title", "sun meaning" );
+      $( ".planet:contains('moon')" ).css( "font-weight", "bold" ).prop( "title", "moon meaning" );
     });
   </script>
 </head>
