@@ -402,22 +402,21 @@ display: flex;
 }
 .analysis-symbol {
     padding-bottom: 10px;
-    font-size: 30px;
-	font-family: astrodotbasic; font-size: 1.2rem;
+	font-family: astrodotbasic; font-size: 2rem;
 }
 .analysis-stats {
     line-height: 16px;
     padding-bottom: 10px;
-	font-family: Akkurat-Mono,Andale Mono,sans-serif;
-    font-size: 12px;
+    font-family: var(--body-font);
+    font-size: 1rem;
     color: #575657;
     letter-spacing: 0;
-	text-transform: uppercase;
+    text-transform: uppercase;
 }
+.analysis-stats div {padding-bottom: 10px;}
 .analysis-analysis {
-	font-family: AkkuratPro-Regular,Arial,sans-serif;
-    font-size: 14px;
-    color: #575657;
+font-family: var(--body-font);
+    font-size: 1rem;
     letter-spacing: 0;
-    line-height: 20px;
+    line-height: 25px;
 }
