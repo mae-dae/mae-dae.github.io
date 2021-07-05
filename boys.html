@@ -43,6 +43,32 @@
       $( ".planet:contains('neptune')" ).prop( "title", "Neptune stays in each sign for around fourteen years, meaning it rules a generation more than a person. It rules dreams, imagination, and the unconscious." );
     });
   </script>
+  <script>
+// jQuery Modal Popups by Black
+// http://code.jfbs.net/?showtopic=57
+$(document).ready(function() {
+	var fadeBackground = $(document.createElement("div")).hide().attr("id", "fade-background"),
+	modalWindow = $(document.createElement("div")).hide().attr("id", "modal-window");
+	$(document.body).append(fadeBackground, modalWindow);
+	$(document).on("click", ".modal-link", function(e) {
+		$("#fade-background").css({ "opacity": "0.3" }).fadeIn("fast");
+                var newContents = $("#" + $(this).data("modal-target")).html();
+                $("#modal-window").html(newContents);
+		$("#modal-window").fadeIn("fast");
+		e.preventDefault();
+	});
+	$(document).on("click", "#fade-background", function() {
+		$("#fade-background").fadeOut("fast");
+		$("#modal-window").fadeOut("fast");
+	});
+	$(document).keypress(function(e) {
+		if(e.keyCode == 27) {
+			$("#fade-background").fadeOut("fast");
+			$("#modal-window").fadeOut("fast");
+		}
+	});
+});
+</script>
 </head>
 <body>
   
@@ -130,6 +156,8 @@
         <div class="div21"> Aquarius </div>
         </div>
           
+        <a href="#" class="modal-link" data-modal-target="gabe-astro-popup">Click to learn more!</a>
+          
         </div>
       </div>
     </div>
@@ -188,6 +216,8 @@
         <div class="div28"> Aries </div>
         </div>
           
+        <a href="#" class="modal-link" data-modal-target="june-astro-popup">Click to learn more!</a>
+          
         </div>
       </div>
     </div>
@@ -240,6 +270,8 @@
         <div class="div22"> Aquarius </div>
         <div class="div23"> Aries </div>
         </div>
+          
+        <a href="#" class="modal-link" data-modal-target="ori-astro-popup">Click to learn more!</a>
           
         </div>
       </div>
@@ -298,6 +330,8 @@
         <div class="div27"> Taurus </div>
         </div>
           
+        <a href="#" class="modal-link" data-modal-target="pawn-astro-popup">Click to learn more!</a>
+          
         </div>
       </div>
     </div>
@@ -352,6 +386,8 @@
         <div class="div24"> Leo </div>
         <div class="div25"> Scorpio </div>
         </div>
+          
+        <a href="#" class="modal-link" data-modal-target="rome-astro-popup">Click to learn more!</a>
           
         </div>
       </div>
@@ -410,6 +446,8 @@
         <div class="div27"> Scorpio </div>
         </div>
           
+        <a href="#" class="modal-link" data-modal-target="tai-astro-popup">Click to learn more!</a>
+          
         </div>
       </div>
     </div>
@@ -418,6 +456,13 @@
     
   </div>
   </div>
+  
+  <div id="gabe-astro-popup" class="modal-content">This is an 1 example popup.</div>
+  <div id="june-astro-popup" class="modal-content">This is an 2 example popup.</div>
+  <div id="ori-astro-popup" class="modal-content">This is an 3 example popup.</div>
+  <div id="pawn-astro-popup" class="modal-content">This is an 4 example popup.</div>
+  <div id="rome-astro-popup" class="modal-content">This is an 5 example popup.</div>
+  <div id="tai-astro-popup" class="modal-content">This is an 6 example popup.</div>
   
 </body>
 </html>
