@@ -356,6 +356,15 @@ display: flex;
 #roman-page .boy-main-image div {background-image: url(https://www.unique.dk/wp-content/uploads/2017/08/creative-face-cherry-earth-17735-beige_-1200x933.jpg);}
 #tai-page .boy-main-image div {background-image: url(https://data.whicdn.com/images/330991008/original.gif);}
 
+.modal-link {
+display: block;
+    text-align: center;
+    text-decoration: none;
+    color: var(--white-hex);
+    font: 600 2vw var(--title-font);
+    letter-spacing: 3px;
+}
+
 .modal-content {
 	display: none;
 }
@@ -371,11 +380,12 @@ display: flex;
 	z-index: 2;
 }
 #modal-window {
-	position: fixed;
-	top: 64px;
-	left: 50%;
-	width: 860px;
-	background-color: #F9F9F9;
-	margin: 0 0 0 -430px;
-	z-index: 3;
+position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 80vw;
+    height: 80vh;
+    background-color: #f7f7f7;
+    margin: -40vh 0 0 -40vw;
+    z-index: 3;
 }
