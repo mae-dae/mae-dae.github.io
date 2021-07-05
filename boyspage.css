@@ -355,3 +355,27 @@ display: flex;
 #pawn-page .boy-main-image div {background-image: url(https://data.whicdn.com/images/281212451/original.gif);}
 #roman-page .boy-main-image div {background-image: url(https://www.unique.dk/wp-content/uploads/2017/08/creative-face-cherry-earth-17735-beige_-1200x933.jpg);}
 #tai-page .boy-main-image div {background-image: url(https://data.whicdn.com/images/330991008/original.gif);}
+
+.modal-content {
+	display: none;
+}
+
+#fade-background {
+	position: fixed;
+	_position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #000000;
+	z-index: 2;
+}
+#modal-window {
+	position: fixed;
+	top: 64px;
+	left: 50%;
+	width: 860px;
+	background-color: #F9F9F9;
+	margin: 0 0 0 -430px;
+	z-index: 3;
+}
