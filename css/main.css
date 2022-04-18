@@ -60,9 +60,12 @@ a:hover {
     grid-column-gap: 0px;
     grid-row-gap: 0px;
 }
-#index-sidebar { grid-area: 1 / 1 / 2 / 2; border-right: 1px solid var(--border-color-hex); backdrop-filter: blur(10px); }
+#index-sidebar { grid-area: 1 / 1 / 2 / 2; border-right: 1px solid var(--border-color-hex); backdrop-filter: blur(10px); display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-end; }
 #index-sidebar .sidebar-ico {}
-.sidebar-ico#home-btn {}
+.sidebar-ico#home-btn {margin-bottom: auto;}
 .sidebar-ico#totop-btn {}
 .sidebar-ico#tobtm-btn {}
 #index-content { grid-area: 1 / 2 / 2 / 3; backdrop-filter: blur(3px); }
