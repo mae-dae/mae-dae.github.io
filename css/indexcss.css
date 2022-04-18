@@ -10,7 +10,7 @@
   overflow: hidden;
 }
 #ih-illustration {grid-area: 1 / 1 / 2 / 4; position: relative;}
-#ih-illustration #ih-img {}
+#ih-illustration #ih-img {width: 55vw; position: relative;}
 #ih-illustration .blob {}
 #ih-illustration #blob-1 {}
 #ih-illustration #blob-2 {}
