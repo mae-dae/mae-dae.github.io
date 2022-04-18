@@ -4,7 +4,8 @@
     box-sizing: border-box;
 }
 :root {
-    --border-color-hex: #a5adb0; 
+    --border-color-hex: #a5adb0;
+    --body-color: #f2f2f2;
 }
 body {
     width: 100%;
@@ -16,6 +17,9 @@ body {
     background-position: center;
     background-attachment: fixed;
     padding-top: 40px;
+    color: var(--body-color);
+    font-family: raleway;
+    font-size: 13px;
 }
 body::before {
     display: block;
