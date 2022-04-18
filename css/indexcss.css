@@ -10,8 +10,21 @@
   overflow: hidden;
 }
 #ih-illustration {grid-area: 1 / 1 / 2 / 4; position: relative;}
-#ih-illustration img {width: 55vw; position: relative; display: block;}
-#ih-illustration .blob {position: absolute;}
-#ih-illustration #blob-1 {}
-#ih-illustration #blob-2 {}
+#ih-illustration img {
+  width: 34vw;
+  position: relative;
+  display: block;
+  margin: 1.5vh auto;
+}
+#ih-illustration .blob {position: absolute; opacity: 0.7;}
+#ih-illustration #blob-1 {
+top: -18vh;
+    left: 3vw;
+    width: 40vw;
+}
+#ih-illustration #blob-2 {
+width: 55vw;
+    left: 5vw;
+    top: -27vh;
+}
 #ih-text {grid-area: 1 / 2 / 2 / 6;}
