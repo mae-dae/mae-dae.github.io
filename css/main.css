@@ -54,5 +54,5 @@ a:hover {
     grid-column-gap: 0px;
     grid-row-gap: 0px;
 }
-#index-sidebar { grid-area: 1 / 1 / 2 / 2; border-right: 1px solid var(--border-color-hex); }
-#index-content { grid-area: 1 / 2 / 2 / 3; }
+#index-sidebar { grid-area: 1 / 1 / 2 / 2; border-right: 1px solid var(--border-color-hex); backdrop-filter: blur(10px); }
+#index-content { grid-area: 1 / 2 / 2 / 3; backdrop-filter: blur(3px); }
