@@ -49,6 +49,7 @@ a:hover {
     margin: 0 40px 40px;
     width: calc(100% - 80px);
     height: calc(100vh - 80px);
+    overflow: scroll;
     background-image: url(https://images.unsplash.com/photo-1649293849269-6cb966992234?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80);
     background-size: cover;
     background-position: center;
