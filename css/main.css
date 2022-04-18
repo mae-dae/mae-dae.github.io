@@ -46,4 +46,11 @@ a:hover {
     background-position: center;
     background-attachment: fixed;
     border: 1px solid #a5adb0;
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
 }
+#index-sidebar { grid-area: 1 / 1 / 2 / 2; }
+#index-content { grid-area: 1 / 2 / 2 / 3; }
