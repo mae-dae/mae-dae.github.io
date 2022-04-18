@@ -61,17 +61,11 @@ a:hover {
     grid-column-gap: 0px;
     grid-row-gap: 0px;
 }
-#index-sidebar { grid-area: 1 / 1 / 2 / 2; border-right: 1px solid var(--border-color-hex); backdrop-filter: blur(10px); }
-#s-stick {
-    position: sticky;
-    top: 0;
-    height: calc(100vh - 81px);
-display: flex;
+#index-sidebar { grid-area: 1 / 1 / 2 / 2; border-right: 1px solid var(--border-color-hex); backdrop-filter: blur(10px); display: flex;
     flex-direction: column;
     align-items: stretch;
-    justify-content: flex-end;
-}
-#s-stick .sidebar-ico {text-align: center; padding: 27px 0px;}
+    justify-content: flex-end; }
+#index-sidebar .sidebar-ico {text-align: center; padding: 27px 0px;}
 .sidebar-ico#home-btn {margin-bottom: auto; border-bottom: 1px solid var(--border-color-hex);}
 .sidebar-ico#totop-btn {border-top: 1px solid var(--border-color-hex);}
 .sidebar-ico#tobtm-btn {border-top: 1px solid var(--border-color-hex);}
