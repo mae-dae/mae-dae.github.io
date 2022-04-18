@@ -70,4 +70,4 @@ a:hover {
 .sidebar-ico#totop-btn {border-top: 1px solid var(--border-color-hex);}
 .sidebar-ico#tobtm-btn {border-top: 1px solid var(--border-color-hex);}
 #index-content { grid-area: 1 / 2 / 2 / 3; backdrop-filter: blur(3px); overflow: hidden; }
-#content-wrapper {}
+#content-wrapper {overflow: scroll;}
