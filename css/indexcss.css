@@ -1,9 +1,17 @@
 #idx-header {
   display: grid;
-grid-template-columns: repeat(5, 1fr);
-grid-template-rows: 1fr;
-grid-column-gap: 0px;
-grid-row-gap: 0px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: calc(100vh - 81px);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  height: calc(100vh - 81px);
+  border-bottom: 1px solid var(--border-color-hex);
+  width: calc(100% - 1px);
+  overflow: hidden;
 }
 #ih-illustration {grid-area: 1 / 1 / 2 / 4;}
+#ih-illustration #ih-img {}
+#ih-illustration .blob {}
+#ih-illustration #blob-1 {}
+#ih-illustration #blob-2 {}
 #ih-text {grid-area: 1 / 2 / 2 / 6;}
