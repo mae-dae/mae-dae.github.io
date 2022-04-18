@@ -31,7 +31,9 @@ width: 55vw;
 grid-area: 1 / 2 / 2 / 6;
     position: relative;
     display: flex;
-    align-content: center;
-    align-items: center;
-    justify-content: flex-start;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
 }
+#ih-text div {}
+#ih-text span {}
