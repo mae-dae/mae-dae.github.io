@@ -27,4 +27,11 @@ width: 55vw;
     left: 5vw;
     top: -27vh;
 }
-#ih-text {grid-area: 1 / 2 / 2 / 6;}
+#ih-text {
+grid-area: 1 / 2 / 2 / 6;
+    position: relative;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: flex-start;
+}
