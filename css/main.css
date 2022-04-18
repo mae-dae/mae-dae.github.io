@@ -64,8 +64,8 @@ a:hover {
     flex-direction: column;
     align-items: stretch;
     justify-content: flex-end; }
-#index-sidebar .sidebar-ico {}
-.sidebar-ico#home-btn {margin-bottom: auto;}
-.sidebar-ico#totop-btn {}
-.sidebar-ico#tobtm-btn {}
+#index-sidebar .sidebar-ico {text-align: center; padding: 10px;}
+.sidebar-ico#home-btn {margin-bottom: auto; border-bottom: 1px solid var(--border-color-hex);}
+.sidebar-ico#totop-btn {border-top: 1px solid var(--border-color-hex);}
+.sidebar-ico#tobtm-btn {border-top: 1px solid var(--border-color-hex);}
 #index-content { grid-area: 1 / 2 / 2 / 3; backdrop-filter: blur(3px); }
