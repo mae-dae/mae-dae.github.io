@@ -34,6 +34,17 @@ grid-area: 1 / 2 / 2 / 6;
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
+  line-height: 600%;
 }
-#ih-text div {}
-#ih-text span {}
+#ih-text div {
+font-family: vidaloka;
+    font-size: 12rem;
+    margin-top: 35vh;
+}
+#ih-text span {
+font-family: courier;
+    padding-right: 6.5vw;
+    display: block;
+    width: 100%;
+    text-align: right;
+}
