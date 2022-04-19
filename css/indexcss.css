@@ -67,6 +67,7 @@ display: block;
 font-family: 'Vidaloka';
     font-size: 4rem;
     text-align: center;
+  margin-bottom: 20px;
 }
 #idx-characters .ch-maintitle span {
 font-family: courier;
@@ -76,6 +77,39 @@ font-family: courier;
     border-bottom: 1px solid var(--border-color-hex);
 }
 #idx-characters .ch-maintitle:first-of-type span {margin: 0 17.4rem -5px;}
-#idx-characters .ch-maintitle:not(:first-of-type) span {margin: 0 17rem -5px;}
-.ch-generation1 {margin-bottom: 80px;}
-.ch-generation2 {}
+#idx-characters .ch-maintitle:not(:first-of-type) span {margin: 0 15rem -5px;}
+.ch-generation1 {
+  margin-bottom: 80px;
+display: grid;
+grid-template-columns: repeat(6, 1fr);
+grid-template-rows: repeat(6, 1fr);
+grid-column-gap: 5px;
+grid-row-gap: 6px;
+}
+#ch-harvey { grid-area: 1 / 1 / 2 / 3; }
+#ch-mouse { grid-area: 1 / 3 / 2 / 5; }
+#ch-bird { grid-area: 1 / 5 / 2 / 7; }
+#ch-roman { grid-area: 2 / 1 / 3 / 4; }
+#ch-june { grid-area: 2 / 4 / 3 / 7; }
+#ch-jay { grid-area: 3 / 1 / 4 / 4; }
+#ch-val { grid-area: 3 / 4 / 4 / 7; }
+#ch-pawn { grid-area: 4 / 1 / 5 / 4; }
+#ch-tai { grid-area: 4 / 4 / 5 / 7; }
+#ch-kevin { grid-area: 5 / 1 / 6 / 4; }
+#ch-del { grid-area: 5 / 4 / 6 / 7; }
+#ch-gabe { grid-area: 6 / 1 / 7 / 4; }
+#ch-orion { grid-area: 6 / 4 / 7 / 7; }
+
+.ch-generation2 {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: repeat(3, 1fr);
+grid-column-gap: 5px;
+grid-row-gap: 6px;
+}
+#ch-mateo { grid-area: 1 / 1 / 2 / 2; }
+#ch-tj { grid-area: 1 / 2 / 2 / 3; }
+#ch-miri { grid-area: 2 / 1 / 3 / 2; }
+#ch-avery { grid-area: 2 / 2 / 3 / 3; }
+#ch-aug { grid-area: 3 / 1 / 4 / 2; }
+#ch-valley { grid-area: 3 / 2 / 4 / 3; }
