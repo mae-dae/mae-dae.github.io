@@ -76,6 +76,6 @@ font-family: courier;
     border-bottom: 1px solid var(--border-color-hex);
 }
 #idx-characters .ch-maintitle:first-of-type span {margin: 0 17.4rem -5px;}
-#idx-characters .ch-maintitle:last-of-type span {margin: 0 17rem -5px;}
+#idx-characters .ch-maintitle:not(:first-of-type) span {margin: 0 17rem -5px;}
 .ch-generation1 {margin-bottom: 80px;}
 .ch-generation2 {}
