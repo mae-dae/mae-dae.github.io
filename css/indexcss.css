@@ -113,3 +113,11 @@ grid-row-gap: 6px;
 #ch-avery { grid-area: 2 / 2 / 3 / 3; }
 #ch-aug { grid-area: 3 / 1 / 4 / 2; }
 #ch-valley { grid-area: 3 / 2 / 4 / 3; }
+
+.ch-block {
+border: 1px solid var(--border-color-hex);
+    background: rgb(28 51 45 / 70%);
+    position: relative;
+    padding: 10px;
+    font-size: 12px;
+}
