@@ -118,6 +118,5 @@ grid-row-gap: 6px;
 border: 1px solid var(--border-color-hex);
     background: rgb(28 51 45 / 70%);
     position: relative;
-    padding: 10px;
     font-size: 12px;
 }
