@@ -115,8 +115,6 @@ grid-row-gap: 6px;
 #ch-valley { grid-area: 3 / 2 / 4 / 3; }
 
 .ch-block {
-border: 1px solid var(--border-color-hex);
-    background: rgb(28 51 45 / 70%);
     position: relative;
     font-size: 12px;
 }
@@ -137,4 +135,7 @@ grid-row-gap: 0px;
 .ch-square .s-signs { grid-area: 8 / 1 / 9 / 2; }
 .ch-square .s-aus { grid-area: 6 / 2 / 9 / 3; }
 
-.ch-rectangle {}
+.ch-rectangle {
+border: 1px solid var(--border-color-hex);
+    background: rgb(28 51 45 / 70%);
+}
