@@ -1,11 +1,10 @@
 #idx-header {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: calc(100vh - 81px);
+  grid-template-rows: calc(100vh - 80px);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  height: calc(100vh - 81px);
-  border-bottom: 1px solid var(--border-color-hex);
+  height: calc(100vh - 80px);
   width: calc(100% - 1px);
   overflow: hidden;
 }
@@ -55,11 +54,16 @@ font-family: courier;
 }
 #idx-characters::before, #idx-characters::after {
 display: block;
-  content: '';
-  height: 1px;
-  width: 100%;
-  background: var(--border-color-hex);
-  left: 0;
+    content: '';
+    height: 1px;
+    width: calc(100% + 80px);
+    background: var(--border-color-hex);
+    left: -80px;
+    position: absolute;
 }
 #idx-characters::before {top: 0;}
 #idx-characters::after {bottom: 0;}
+.ch-maintitle {}
+.ch-maintitle span {}
+.ch-generation1 {}
+.ch-generation2 {}
