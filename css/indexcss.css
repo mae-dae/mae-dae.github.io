@@ -68,7 +68,7 @@ font-family: 'Vidaloka';
     font-size: 4rem;
     text-align: center;
 }
-#idx-characters .ch-maintitle::first-of-type span {
+#idx-characters .ch-maintitle:first-of-type span {
 font-family: courier;
     font-size: 13px;
     display: block;
@@ -76,6 +76,6 @@ font-family: courier;
     margin: 0 17.4rem -5px;
     border-bottom: 1px solid var(--border-color-hex);
 }
-#idx-characters .ch-maintitle::last-of-type span {}
+#idx-characters .ch-maintitle:last-of-type span {}
 .ch-generation1 {margin-bottom: 80px;}
 .ch-generation2 {}
