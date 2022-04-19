@@ -120,3 +120,5 @@ border: 1px solid var(--border-color-hex);
     position: relative;
     font-size: 12px;
 }
+.ch-square {}
+.ch-rectangle {}
