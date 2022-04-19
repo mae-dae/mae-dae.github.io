@@ -48,3 +48,18 @@ font-family: courier;
     width: 100%;
     text-align: right;
 }
+
+#idx-characters {
+  padding: 40px;
+  position: relative;
+}
+#idx-characters::before, #idx-characters::after {
+display: block;
+  content: '';
+  height: 1px;
+  width: 100%;
+  background: var(--border-color-hex);
+  left: 0;
+}
+#idx-characters::before {top: 0;}
+#idx-characters::after {bottom: 0;}
