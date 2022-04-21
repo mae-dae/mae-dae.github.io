@@ -162,9 +162,17 @@ display: flex;
     font-size: 4rem;
     text-shadow: -1px -1px 0 #0f171a, 1px -1px 0 #0f171a, -1px 1px 0 #0f171a, 1px 1px 0 #0f171a;
 }
-.ch-square .s-last { grid-area: 5 / 1 / 6 / 3; }
+.ch-square .s-last {
+  grid-area: 5 / 1 / 6 / 3;
+    text-align: center;
+    font-family: courier;
+    font-size: 13px;
+    border-bottom: 1px solid var(--border-color-hex);
+    text-transform: lowercase;
+}
 .ch-square .s-age { grid-area: 6 / 1 / 7 / 2; }
 .ch-square .s-birth { grid-area: 7 / 1 / 8 / 2; }
+.ch-square .s-birth span {}
 .ch-square .s-signs { grid-area: 8 / 1 / 9 / 2; }
 .ch-square .s-aus { grid-area: 6 / 2 / 9 / 3; }
 
