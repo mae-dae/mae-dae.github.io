@@ -170,6 +170,7 @@ display: flex;
     border-bottom: 1px solid var(--border-color-hex);
     text-transform: lowercase;
 }
+.ch-square .s-age, .ch-square .s-birth {}
 .ch-square .s-age { grid-area: 6 / 1 / 7 / 2; }
 .ch-square .s-birth { grid-area: 7 / 1 / 8 / 2; }
 .ch-square .s-birth span {display: block; width: max-content;}
