@@ -170,8 +170,14 @@ display: flex;
     border-bottom: 1px solid var(--border-color-hex);
     text-transform: lowercase;
 }
-.ch-square .s-age, .ch-square .s-birth {}
-.ch-square .s-age { grid-area: 6 / 1 / 7 / 2; }
+.ch-square .s-age, .ch-square .s-birth {
+display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.ch-square .s-age { grid-area: 6 / 1 / 7 / 2; font-family: 'Vidaloka'; font-size: 1.5rem; }
+.ch-square .s-age::after {display: inline; content: 'yo';}
 .ch-square .s-birth { grid-area: 7 / 1 / 8 / 2; }
 .ch-square .s-birth span {display: block; width: max-content;}
 .ch-square .s-signs { grid-area: 8 / 1 / 9 / 3; border-top: 1px solid var(--border-color-hex); }
