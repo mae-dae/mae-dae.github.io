@@ -137,8 +137,18 @@ function populateCategories() {
     });
 }
 
-// Function to export sheet as image
-function exportSheet() {
+// Populate categories and kinks on page load
+document.addEventListener('DOMContentLoaded', function() {
+    populateCategories();
+
+    // Export button click event
+    var exportBtn = document.getElementById('ExportBtn');
+    exportBtn.addEventListener('click', function() {
+        exportSheet();
+    });
+
+    // Function to export sheet as image
+document.addEventListener('DOMContentLoaded', function exportSheet() {
     var sheetElement = document.getElementById('Sheet');
 
     domtoimage.toPng(sheetElement)
@@ -155,14 +165,4 @@ function exportSheet() {
             console.error('Error exporting sheet:', error);
         });
 }
-
-// Populate categories and kinks on page load
-document.addEventListener('DOMContentLoaded', function() {
-    populateCategories();
-
-    // Export button click event
-    var exportBtn = document.getElementById('ExportBtn');
-    exportBtn.addEventListener('click', function() {
-        exportSheet();
-    });
 });
