@@ -1,11 +1,11 @@
-// Define your data here or load it from an external source
+// Data for categories, kinks, and choices
 var categoriesData = [
     {
         categoryName: "Category 1",
         kinks: [
-            { 
-                kinkName: "Kink 1.1", 
-                tooltip: "This is a tooltip for Kink 1.1",
+            {
+                kinkName: "Kink 1.1",
+                tooltip: "Tooltip for Kink 1.1",
                 choices: [
                     { name: "Not Applicable" },
                     { name: "Favourite" },
@@ -14,9 +14,9 @@ var categoriesData = [
                     { name: "No" }
                 ]
             },
-            { 
-                kinkName: "Kink 1.2", 
-                tooltip: "This is a tooltip for Kink 1.2",
+            {
+                kinkName: "Kink 1.2",
+                tooltip: "Tooltip for Kink 1.2",
                 choices: [
                     { name: "Not Applicable" },
                     { name: "Favourite" },
@@ -30,9 +30,9 @@ var categoriesData = [
     {
         categoryName: "Category 2",
         kinks: [
-            { 
-                kinkName: "Kink 2.1", 
-                tooltip: "This is a tooltip for Kink 2.1",
+            {
+                kinkName: "Kink 2.1",
+                tooltip: "Tooltip for Kink 2.1",
                 choices: [
                     { name: "Not Applicable" },
                     { name: "Favourite" },
@@ -41,9 +41,9 @@ var categoriesData = [
                     { name: "No" }
                 ]
             },
-            { 
-                kinkName: "Kink 2.2", 
-                tooltip: "This is a tooltip for Kink 2.2",
+            {
+                kinkName: "Kink 2.2",
+                tooltip: "", // No tooltip for Kink 2.2
                 choices: [
                     { name: "Not Applicable" },
                     { name: "Favourite" },
@@ -109,7 +109,7 @@ function populateCategories() {
 
                     // Show explanation textarea when 'Interested' is selected
                     choiceInput.addEventListener('change', function() {
-                        explanationInput.style.display = this.value === '3' ? 'block' : 'none';
+                        explanationInput.style.display = this.checked ? 'block' : 'none';
                     });
                 }
             });
