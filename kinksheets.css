@@ -1,31 +1,57 @@
-/* Add your custom styles here */
+/* Basic styles for the sheet */
 body {
     font-family: Arial, sans-serif;
     padding: 20px;
 }
 
-.category {
+#Sheet {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+#Categories {
     margin-bottom: 20px;
 }
 
-.category h2 {
-    font-size: 1.2em;
+.Category {
+    margin-bottom: 20px;
+}
+
+.CategoryTitle {
+    font-size: 20px;
+    font-weight: bold;
     margin-bottom: 10px;
 }
 
-.kink {
+.Kink {
     margin-bottom: 10px;
 }
 
-button {
-    margin-top: 20px;
+.Explanation {
+    display: none;
+    margin-top: 5px;
+}
+
+#ExportBtn {
+    display: block;
+    margin: 0 auto;
     padding: 10px 20px;
-    font-size: 1em;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-textarea {
-    display: block;
-    width: 100%;
-    margin-top: 5px;
+#ExportBtn:hover {
+    background-color: #45a049;
 }
