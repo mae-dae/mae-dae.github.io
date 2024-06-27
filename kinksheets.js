@@ -141,16 +141,19 @@ function populateCategories() {
 function exportSheet() {
     var sheetElement = document.getElementById('Sheet');
 
-    html2canvas(sheetElement).then(function(canvas) {
-        var imgData = canvas.toDataURL('image/png');
-        var img = new Image();
-        img.src = imgData;
+    domtoimage.toPng(sheetElement)
+        .then(function (dataUrl) {
+            var img = new Image();
+            img.src = dataUrl;
 
-        // Display the generated image at the bottom of the page
-        var imageContainer = document.getElementById('ExportedImage');
-        imageContainer.innerHTML = ''; // Clear previous images
-        imageContainer.appendChild(img);
-    });
+            // Display the generated image at the bottom of the page
+            var imageContainer = document.getElementById('ExportedImage');
+            imageContainer.innerHTML = ''; // Clear previous images
+            imageContainer.appendChild(img);
+        })
+        .catch(function (error) {
+            console.error('Error exporting sheet:', error);
+        });
 }
 
 // Populate categories and kinks on page load
