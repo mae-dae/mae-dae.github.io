@@ -125,19 +125,4 @@ function populateCategories() {
 // Populate categories and kinks on page load
 document.addEventListener('DOMContentLoaded', function() {
     populateCategories();
-
-    // Export button functionality
-    var exportBtn = document.getElementById('ExportBtn');
-    exportBtn.addEventListener('click', function() {
-        html2canvas(document.getElementById('Categories')).then(function(canvas) {
-            var sheetContainer = document.getElementById('Sheet');
-            sheetContainer.innerHTML = '';
-            sheetContainer.appendChild(canvas);
-
-            // Open the generated sheet as an image in a new tab
-            var image = canvas.toDataURL();
-            var windowPopup = window.open(image, '_blank');
-            windowPopup.focus();
-        });
-    });
 });
