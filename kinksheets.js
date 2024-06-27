@@ -146,10 +146,10 @@ function exportSheet() {
         var img = new Image();
         img.src = imgData;
 
-        var exportLink = document.createElement('a');
-        exportLink.href = img.src;
-        exportLink.download = 'roleplaying_sheet.png';
-        exportLink.click();
+        // Display the generated image at the bottom of the page
+        var imageContainer = document.getElementById('ExportedImage');
+        imageContainer.innerHTML = ''; // Clear previous images
+        imageContainer.appendChild(img);
     });
 }
 
