@@ -137,7 +137,29 @@ function populateCategories() {
     });
 }
 
+// Function to export sheet as image
+function exportSheet() {
+    var sheetElement = document.getElementById('Sheet');
+
+    html2canvas(sheetElement).then(function(canvas) {
+        var imgData = canvas.toDataURL('image/png');
+        var img = new Image();
+        img.src = imgData;
+
+        var exportLink = document.createElement('a');
+        exportLink.href = img.src;
+        exportLink.download = 'roleplaying_sheet.png';
+        exportLink.click();
+    });
+}
+
 // Populate categories and kinks on page load
 document.addEventListener('DOMContentLoaded', function() {
     populateCategories();
+
+    // Export button click event
+    var exportBtn = document.getElementById('ExportBtn');
+    exportBtn.addEventListener('click', function() {
+        exportSheet();
+    });
 });
