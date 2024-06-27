@@ -1,17 +1,18 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const categories = [
+    // Define categories, kinks, and choices
+    const data = [
         {
-            title: 'Category 1',
+            category: 'Category 1',
             kinks: [
-                { title: 'Kink 1.1' },
+                { title: 'Kink 1.1', tooltip: 'Tooltip for Kink 1.1' },
                 { title: 'Kink 1.2' },
-                { title: 'Kink 1.3' }
+                { title: 'Kink 1.3', tooltip: 'Tooltip for Kink 1.3' }
             ]
         },
         {
-            title: 'Category 2',
+            category: 'Category 2',
             kinks: [
-                { title: 'Kink 2.1' },
+                { title: 'Kink 2.1', tooltip: 'Tooltip for Kink 2.1' },
                 { title: 'Kink 2.2' }
             ]
         }
@@ -27,23 +28,31 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const sheetContainer = document.getElementById('Categories');
 
-    // Generate categories and kinks
-    categories.forEach(category => {
+    // Generate categories, kinks, and choices dynamically
+    data.forEach(categoryData => {
         const categoryDiv = document.createElement('div');
         categoryDiv.classList.add('Category');
 
         const categoryTitle = document.createElement('div');
         categoryTitle.classList.add('CategoryTitle');
-        categoryTitle.textContent = category.title;
+        categoryTitle.textContent = categoryData.category;
         categoryDiv.appendChild(categoryTitle);
 
-        category.kinks.forEach(kink => {
+        categoryData.kinks.forEach(kinkData => {
             const kinkDiv = document.createElement('div');
             kinkDiv.classList.add('Kink');
 
             const kinkTitle = document.createElement('div');
-            kinkTitle.textContent = kink.title;
+            kinkTitle.textContent = kinkData.title;
             kinkDiv.appendChild(kinkTitle);
+
+            if (kinkData.tooltip) {
+                const tooltipSpan = document.createElement('span');
+                tooltipSpan.textContent = '?';
+                tooltipSpan.classList.add('Tooltip');
+                tooltipSpan.title = kinkData.tooltip;
+                kinkTitle.appendChild(tooltipSpan);
+            }
 
             const choicesContainer = document.createElement('div');
             choicesContainer.classList.add('Choices');
@@ -52,10 +61,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 const choiceLabel = document.createElement('label');
                 const input = document.createElement('input');
                 input.type = 'radio';
-                input.name = `${category.title}-${kink.title}`;
+                input.name = `${categoryData.category}-${kinkData.title}`;
                 input.value = index;
-                input.dataset.category = category.title;
-                input.dataset.kink = kink.title;
+                input.dataset.category = categoryData.category;
+                input.dataset.kink = kinkData.title;
                 input.dataset.choice = choice.label;
                 input.addEventListener('change', handleChoiceChange);
 
