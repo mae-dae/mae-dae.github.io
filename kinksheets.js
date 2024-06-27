@@ -104,10 +104,25 @@ function populateCategories() {
                 choiceInput.value = index; // Adjust value as needed
 
                 choiceInput.addEventListener('change', function() {
-                    if (choice.name === 'Interested') {
-                        explanationInput.style.display = this.checked ? 'block' : 'none';
+                    // Hide all explanation textareas in the current category
+                    var currentCategoryInputs = document.querySelectorAll(`input[name="choice-${category.categoryName}-${kink.kinkName}"]`);
+                    currentCategoryInputs.forEach(function(input) {
+                        var kinkDiv = input.closest('.kink');
+                        var explanationInput = kinkDiv.querySelector('.explanation');
+                        if (explanationInput) {
+                            explanationInput.style.display = 'none';
+                        }
+                    });
+
+                    // Show explanation textarea only if "Interested" is selected
+                    var kinkDiv = this.closest('.kink');
+                    var explanationInput = kinkDiv.querySelector('.explanation');
+                    if (explanationInput && choice.name === 'Interested') {
+                        explanationInput.style.display = 'block';
                     } else {
-                        explanationInput.style.display = 'none';
+                        if (explanationInput) {
+                            explanationInput.style.display = 'none';
+                        }
                     }
                 });
 
