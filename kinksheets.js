@@ -86,6 +86,14 @@ function populateCategories() {
 
             kinkDiv.appendChild(kinkTitle);
 
+            var explanationInput = document.createElement('textarea');
+            explanationInput.placeholder = 'Optional explanation...';
+            explanationInput.classList.add('explanation');
+            kinkDiv.appendChild(explanationInput);
+
+            // Initially hide the explanation textarea
+            explanationInput.style.display = 'none';
+
             kink.choices.forEach(function(choice, index) {
                 var choiceLabel = document.createElement('label');
                 choiceLabel.textContent = choice.name;
@@ -95,23 +103,16 @@ function populateCategories() {
                 choiceInput.name = `choice-${category.categoryName}-${kink.kinkName}`;
                 choiceInput.value = index; // Adjust value as needed
 
+                choiceInput.addEventListener('change', function() {
+                    if (choice.name === 'Interested') {
+                        explanationInput.style.display = this.checked ? 'block' : 'none';
+                    } else {
+                        explanationInput.style.display = 'none';
+                    }
+                });
+
                 choiceLabel.appendChild(choiceInput);
                 kinkDiv.appendChild(choiceLabel);
-
-                if (choice.name === 'Interested') {
-                    var explanationInput = document.createElement('textarea');
-                    explanationInput.placeholder = 'Optional explanation...';
-                    explanationInput.classList.add('explanation');
-                    kinkDiv.appendChild(explanationInput);
-
-                    // Initially hide the explanation textarea
-                    explanationInput.style.display = 'none';
-
-                    // Show explanation textarea when 'Interested' is selected
-                    choiceInput.addEventListener('change', function() {
-                        explanationInput.style.display = this.checked ? 'block' : 'none';
-                    });
-                }
             });
 
             categoryDiv.appendChild(kinkDiv);
