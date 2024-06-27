@@ -3,16 +3,16 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             title: 'Category 1',
             kinks: [
-                { name: 'Kink 1.1' },
-                { name: 'Kink 1.2' },
-                { name: 'Kink 1.3' }
+                { title: 'Kink 1.1' },
+                { title: 'Kink 1.2' },
+                { title: 'Kink 1.3' }
             ]
         },
         {
             title: 'Category 2',
             kinks: [
-                { name: 'Kink 2.1' },
-                { name: 'Kink 2.2' }
+                { title: 'Kink 2.1' },
+                { title: 'Kink 2.2' }
             ]
         }
     ];
@@ -41,9 +41,9 @@ document.addEventListener('DOMContentLoaded', function() {
             const kinkDiv = document.createElement('div');
             kinkDiv.classList.add('Kink');
 
-            const kinkLabel = document.createElement('span');
-            kinkLabel.textContent = kink.name;
-            kinkDiv.appendChild(kinkLabel);
+            const kinkTitle = document.createElement('div');
+            kinkTitle.textContent = kink.title;
+            kinkDiv.appendChild(kinkTitle);
 
             const choicesContainer = document.createElement('div');
             choicesContainer.classList.add('Choices');
@@ -52,10 +52,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 const choiceLabel = document.createElement('label');
                 const input = document.createElement('input');
                 input.type = 'radio';
-                input.name = `${category.title}-${kink.name}`;
+                input.name = `${category.title}-${kink.title}`;
                 input.value = index;
                 input.dataset.category = category.title;
-                input.dataset.kink = kink.name;
+                input.dataset.kink = kink.title;
                 input.dataset.choice = choice.label;
                 input.addEventListener('change', handleChoiceChange);
 
@@ -70,6 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     const explanationInput = document.createElement('textarea');
                     explanationInput.placeholder = 'Enter explanation (optional)';
                     explanationInput.classList.add('Explanation');
+                    explanationInput.style.display = 'none'; // Initially hidden
                     kinkDiv.appendChild(explanationInput);
                 }
             });
