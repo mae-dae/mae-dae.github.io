@@ -1,117 +1,92 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Define categories, kinks, and choices
-    const data = [
-        {
-            category: 'Category 1',
-            kinks: [
-                { title: 'Kink 1.1', tooltip: 'Tooltip for Kink 1.1' },
-                { title: 'Kink 1.2' },
-                { title: 'Kink 1.3', tooltip: 'Tooltip for Kink 1.3' }
-            ]
-        },
-        {
-            category: 'Category 2',
-            kinks: [
-                { title: 'Kink 2.1', tooltip: 'Tooltip for Kink 2.1' },
-                { title: 'Kink 2.2' }
-            ]
-        }
-    ];
+// Define your data here or load it from an external source
+var categoriesData = [
+    {
+        categoryName: "Category 1",
+        kinks: [
+            { kinkName: "Kink 1.1", choices: ["Not Applicable", "Favourite", "Like", "Interested", "No"] },
+            { kinkName: "Kink 1.2", choices: ["Not Applicable", "Favourite", "Like", "Interested", "No"] }
+        ]
+    },
+    {
+        categoryName: "Category 2",
+        kinks: [
+            { kinkName: "Kink 2.1", choices: ["Not Applicable", "Favourite", "Like", "Interested", "No"] },
+            { kinkName: "Kink 2.2", choices: ["Not Applicable", "Favourite", "Like", "Interested", "No"] }
+        ]
+    }
+];
 
-    const choices = [
-        { label: 'Not Applicable' },
-        { label: 'Favourite' },
-        { label: 'Like' },
-        { label: 'Interested', explanation: true },
-        { label: 'No' }
-    ];
+// Function to populate categories and kinks
+function populateCategories() {
+    var categoriesContainer = document.getElementById('Categories');
 
-    const sheetContainer = document.getElementById('Categories');
+    categoriesData.forEach(function(category) {
+        var categoryDiv = document.createElement('div');
+        categoryDiv.classList.add('category');
 
-    // Generate categories, kinks, and choices dynamically
-    data.forEach(categoryData => {
-        const categoryDiv = document.createElement('div');
-        categoryDiv.classList.add('Category');
-
-        const categoryTitle = document.createElement('div');
-        categoryTitle.classList.add('CategoryTitle');
-        categoryTitle.textContent = categoryData.category;
+        var categoryTitle = document.createElement('h2');
+        categoryTitle.textContent = category.categoryName;
         categoryDiv.appendChild(categoryTitle);
 
-        categoryData.kinks.forEach(kinkData => {
-            const kinkDiv = document.createElement('div');
-            kinkDiv.classList.add('Kink');
+        category.kinks.forEach(function(kink) {
+            var kinkDiv = document.createElement('div');
+            kinkDiv.classList.add('kink');
 
-            const kinkTitle = document.createElement('div');
-            kinkTitle.textContent = kinkData.title;
+            var kinkTitle = document.createElement('h3');
+            kinkTitle.textContent = kink.kinkName;
             kinkDiv.appendChild(kinkTitle);
 
-            if (kinkData.tooltip) {
-                const tooltipSpan = document.createElement('span');
-                tooltipSpan.textContent = '?';
-                tooltipSpan.classList.add('Tooltip');
-                tooltipSpan.title = kinkData.tooltip;
-                kinkTitle.appendChild(tooltipSpan);
-            }
+            kink.choices.forEach(function(choice, index) {
+                var choiceLabel = document.createElement('label');
+                choiceLabel.textContent = choice;
 
-            const choicesContainer = document.createElement('div');
-            choicesContainer.classList.add('Choices');
+                var choiceInput = document.createElement('input');
+                choiceInput.type = 'radio';
+                choiceInput.name = `choice-${category.categoryName}-${kink.kinkName}`;
+                choiceInput.value = index; // Adjust value as needed
 
-            choices.forEach((choice, index) => {
-                const choiceLabel = document.createElement('label');
-                const input = document.createElement('input');
-                input.type = 'radio';
-                input.name = `${categoryData.category}-${kinkData.title}`;
-                input.value = index;
-                input.dataset.category = categoryData.category;
-                input.dataset.kink = kinkData.title;
-                input.dataset.choice = choice.label;
-                input.addEventListener('change', handleChoiceChange);
+                choiceLabel.appendChild(choiceInput);
+                kinkDiv.appendChild(choiceLabel);
 
-                const choiceSpan = document.createElement('span');
-                choiceSpan.textContent = choice.label;
-
-                choiceLabel.appendChild(input);
-                choiceLabel.appendChild(choiceSpan);
-                choicesContainer.appendChild(choiceLabel);
-
-                if (choice.explanation && choice.explanation === true) {
-                    const explanationInput = document.createElement('textarea');
-                    explanationInput.placeholder = 'Enter explanation (optional)';
-                    explanationInput.classList.add('Explanation');
-                    explanationInput.style.display = 'none'; // Initially hidden
+                if (choice === 'Interested') {
+                    var explanationInput = document.createElement('textarea');
+                    explanationInput.placeholder = 'Optional explanation...';
+                    explanationInput.classList.add('explanation');
                     kinkDiv.appendChild(explanationInput);
+
+                    // Initially hide the explanation textarea
+                    explanationInput.style.display = 'none';
+
+                    // Show explanation textarea when 'Interested' is selected
+                    choiceInput.addEventListener('change', function() {
+                        explanationInput.style.display = this.value === '3' ? 'block' : 'none';
+                    });
                 }
             });
 
-            kinkDiv.appendChild(choicesContainer);
             categoryDiv.appendChild(kinkDiv);
         });
 
-        sheetContainer.appendChild(categoryDiv);
+        categoriesContainer.appendChild(categoryDiv);
     });
+}
 
-    function handleChoiceChange(event) {
-        const selectedExplanation = event.target.parentNode.querySelector('.Explanation');
-        if (selectedExplanation) {
-            if (event.target.dataset.choice === 'Interested') {
-                selectedExplanation.style.display = 'block';
-            } else {
-                selectedExplanation.style.display = 'none';
-            }
-        }
-    }
+// Populate categories and kinks on page load
+document.addEventListener('DOMContentLoaded', function() {
+    populateCategories();
 
-    // Export as Image button functionality
-    const exportBtn = document.getElementById('ExportBtn');
+    // Export button functionality
+    var exportBtn = document.getElementById('ExportBtn');
     exportBtn.addEventListener('click', function() {
-        const sheetElement = document.getElementById('Sheet');
-        html2canvas(sheetElement).then(function(canvas) {
-            const imgData = canvas.toDataURL('image/jpeg');
-            const img = new Image();
-            img.src = imgData;
-            const newTab = window.open();
-            newTab.document.body.appendChild(img);
+        html2canvas(document.getElementById('RoleplayingSheet')).then(function(canvas) {
+            var sheetContainer = document.getElementById('Sheet');
+            sheetContainer.innerHTML = '';
+            sheetContainer.appendChild(canvas);
+
+            // Open the generated sheet as an image in a new tab
+            var image = canvas.toDataURL();
+            var windowPopup = window.open(image, '_blank');
+            windowPopup.focus();
         });
     });
 });
