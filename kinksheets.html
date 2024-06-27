@@ -7,13 +7,14 @@
     <link rel="stylesheet" href="kinksheets.css">
 </head>
 <body>
-    <div id="Categories"></div>
+    <div id="Categories" class="categories"></div>
+    <button id="ExportBtn">Export Sheet</button>
+    <div id="Sheet" class="sheet"></div>
 
-    <button id="ExportBtn">Export as Image</button>
+    <!-- Container to display exported images -->
+    <div id="ExportedImage" class="exported-image-container"></div>
 
-    <div id="Sheet"></div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
     <script src="kinksheets.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
 </body>
 </html>
