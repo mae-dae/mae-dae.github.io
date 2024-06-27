@@ -17,11 +17,7 @@ h1 {
     text-align: center;
 }
 
-.CategoryTitle {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
+/* Basic styles, adjust as needed */
 .category {
     margin-bottom: 20px;
 }
@@ -32,12 +28,14 @@ h1 {
 
 .tooltip {
     margin-left: 5px;
-    cursor: pointer;
+    cursor: help;
 }
 
-.Explanation {
-    display: none;
+.explanation {
     margin-top: 5px;
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
 }
 
 #ExportBtn {
