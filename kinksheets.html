@@ -1,16 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Roleplaying Sheet Generator</title>
-<link rel="stylesheet" href="kinksheets.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roleplaying Sheet Generator</title>
+    <link rel="stylesheet" href="kinksheets.css">
 </head>
 <body>
-<div id="sheet"></div>
-<button id="exportBtn">Export as JPEG</button>
-<canvas id="canvas" style="display: none;"></canvas>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
-<script src="kinksheets.js"></script>
+    <div id="sheet"></div>
+
+    <div class="category" data-category="Category 1">
+        <div class="kink" data-kink="Kink 1">
+            <label><input type="radio" name="category1_kink1" value="Not Applicable"> Not Applicable</label>
+            <label><input type="radio" name="category1_kink1" value="Favourite"> Favourite</label>
+            <label><input type="radio" name="category1_kink1" value="Like"> Like</label>
+            <label><input type="radio" name="category1_kink1" value="Interested"> Interested</label>
+            <label><input type="radio" name="category1_kink1" value="No"> No</label>
+            <textarea class="explanation" placeholder="Add optional note"></textarea>
+        </div>
+        <div class="kink" data-kink="Kink 2">
+            <label><input type="radio" name="category1_kink2" value="Not Applicable"> Not Applicable</label>
+            <label><input type="radio" name="category1_kink2" value="Favourite"> Favourite</label>
+            <label><input type="radio" name="category1_kink2" value="Like"> Like</label>
+            <label><input type="radio" name="category1_kink2" value="Interested"> Interested</label>
+            <label><input type="radio" name="category1_kink2" value="No"> No</label>
+            <textarea class="explanation" placeholder="Add optional note"></textarea>
+        </div>
+    </div>
+
+    <div class="category" data-category="Category 2">
+        <div class="kink" data-kink="Kink 3">
+            <label><input type="radio" name="category2_kink3" value="Not Applicable"> Not Applicable</label>
+            <label><input type="radio" name="category2_kink3" value="Favourite"> Favourite</label>
+            <label><input type="radio" name="category2_kink3" value="Like"> Like</label>
+            <label><input type="radio" name="category2_kink3" value="Interested"> Interested</label>
+            <label><input type="radio" name="category2_kink3" value="No"> No</label>
+            <textarea class="explanation" placeholder="Add optional note"></textarea>
+        </div>
+        <!-- Add more kinks as needed -->
+    </div>
+
+    <button id="exportButton">Export</button>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="kinksheets.js"></script>
 </body>
 </html>
