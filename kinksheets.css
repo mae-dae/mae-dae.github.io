@@ -1,60 +1,31 @@
+/* Add your custom styles here */
 body {
-  font-family: Arial, sans-serif;
-  padding: 20px;
+    font-family: Arial, sans-serif;
+    padding: 20px;
 }
 
 .category {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
-h2, h3, h4 {
-  margin: 0;
+.category h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
 }
 
 .kink {
-  margin-bottom: 10px;
-}
-
-.tooltip {
-  font-size: 0.9em;
-  color: #666;
-  margin-bottom: 5px;
-}
-
-.choices {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.choice {
-  border: 1px solid #ccc;
-  padding: 5px;
-  margin-right: 10px;
-  margin-bottom: 5px;
-  cursor: pointer;
-}
-
-.choice.selected {
-  background-color: #007bff;
-  color: #fff;
-}
-
-.explanation-text {
-  display: none;
-  width: calc(100% - 12px);
-  margin-top: 5px;
-  padding: 5px;
+    margin-bottom: 10px;
 }
 
 button {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  margin-top: 20px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
 }
 
-canvas {
-  display: none;
+textarea {
+    display: block;
+    width: 100%;
+    margin-top: 5px;
 }
