@@ -1,56 +1,107 @@
-// Define a data structure to hold selections
-let selections = {};
+document.addEventListener('DOMContentLoaded', function() {
+    const categories = [
+        {
+            title: 'Category 1',
+            kinks: [
+                { name: 'Kink 1.1' },
+                { name: 'Kink 1.2' },
+                { name: 'Kink 1.3' }
+            ]
+        },
+        {
+            title: 'Category 2',
+            kinks: [
+                { name: 'Kink 2.1' },
+                { name: 'Kink 2.2' }
+            ]
+        }
+    ];
 
-// Function to generate the sheet dynamically based on selections
-function generateSheet() {
-    // Reset selections
-    selections = {};
+    const choices = [
+        { label: 'Not Applicable' },
+        { label: 'Favourite' },
+        { label: 'Like' },
+        { label: 'Interested', explanation: true },
+        { label: 'No' }
+    ];
 
-    // Iterate over each category
-    $('.category').each(function(index) {
-        let category = $(this).data('category');
-        selections[category] = {};
+    const sheetContainer = document.getElementById('Categories');
 
-        // Iterate over each kink within the category
-        $(this).find('.kink').each(function() {
-            let kink = $(this).data('kink');
-            let value = $(this).find('input:checked').val(); // Assuming radio buttons for choices
-            let explanation = $(this).find('.explanation').val(); // Optional explanation text
+    // Generate categories and kinks
+    categories.forEach(category => {
+        const categoryDiv = document.createElement('div');
+        categoryDiv.classList.add('Category');
 
-            // Store the selected value and explanation (if provided)
-            selections[category][kink] = {
-                value: value,
-                explanation: explanation
-            };
+        const categoryTitle = document.createElement('div');
+        categoryTitle.classList.add('CategoryTitle');
+        categoryTitle.textContent = category.title;
+        categoryDiv.appendChild(categoryTitle);
+
+        category.kinks.forEach(kink => {
+            const kinkDiv = document.createElement('div');
+            kinkDiv.classList.add('Kink');
+
+            const kinkLabel = document.createElement('span');
+            kinkLabel.textContent = kink.name;
+            kinkDiv.appendChild(kinkLabel);
+
+            const choicesContainer = document.createElement('div');
+            choicesContainer.classList.add('Choices');
+
+            choices.forEach((choice, index) => {
+                const choiceLabel = document.createElement('label');
+                const input = document.createElement('input');
+                input.type = 'radio';
+                input.name = `${category.title}-${kink.name}`;
+                input.value = index;
+                input.dataset.category = category.title;
+                input.dataset.kink = kink.name;
+                input.dataset.choice = choice.label;
+                input.addEventListener('change', handleChoiceChange);
+
+                const choiceSpan = document.createElement('span');
+                choiceSpan.textContent = choice.label;
+
+                choiceLabel.appendChild(input);
+                choiceLabel.appendChild(choiceSpan);
+                choicesContainer.appendChild(choiceLabel);
+
+                if (choice.explanation && choice.explanation === true) {
+                    const explanationInput = document.createElement('textarea');
+                    explanationInput.placeholder = 'Enter explanation (optional)';
+                    explanationInput.classList.add('Explanation');
+                    kinkDiv.appendChild(explanationInput);
+                }
+            });
+
+            kinkDiv.appendChild(choicesContainer);
+            categoryDiv.appendChild(kinkDiv);
         });
+
+        sheetContainer.appendChild(categoryDiv);
     });
 
-    // Debugging: log selections
-    console.log('Selections:', selections);
+    function handleChoiceChange(event) {
+        const selectedExplanation = event.target.parentNode.querySelector('.Explanation');
+        if (selectedExplanation) {
+            if (event.target.dataset.choice === 'Interested') {
+                selectedExplanation.style.display = 'block';
+            } else {
+                selectedExplanation.style.display = 'none';
+            }
+        }
+    }
 
-    // Call function to generate sheet based on selections
-    generateSheetContent(selections);
-}
-
-// Function to generate sheet content based on selections
-function generateSheetContent(selections) {
-    // Clear previous content if any
-    $('#sheet').empty();
-
-    // Iterate over selections to generate HTML content
-    Object.keys(selections).forEach(category => {
-        $('#sheet').append(`<h2>${category}</h2>`);
-
-        Object.keys(selections[category]).forEach(kink => {
-            let value = selections[category][kink].value;
-            let explanation = selections[category][kink].explanation ? `<p><em>Explanation:</em> ${selections[category][kink].explanation}</p>` : '';
-
-            $('#sheet').append(`<p>${kink}: ${value}</p>${explanation}`);
+    // Export as Image button functionality
+    const exportBtn = document.getElementById('ExportBtn');
+    exportBtn.addEventListener('click', function() {
+        const sheetElement = document.getElementById('Sheet');
+        html2canvas(sheetElement).then(function(canvas) {
+            const imgData = canvas.toDataURL('image/jpeg');
+            const img = new Image();
+            img.src = imgData;
+            const newTab = window.open();
+            newTab.document.body.appendChild(img);
         });
     });
-}
-
-// Event listener for export button
-$('#exportButton').on('click', function() {
-    generateSheet();
 });
